@@ -23,6 +23,7 @@
 button {
 	background: blue;
 	color: red;
+	transition: color 0.5s, background 0.5s;
 	height: 35px;
 	width: 70px;
 	border-radius: 15px;
