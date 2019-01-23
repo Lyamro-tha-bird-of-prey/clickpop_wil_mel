@@ -1,0 +1,29 @@
+.parentDisable {
+	z-index:999;
+	width:100%;
+	height:100%;
+	display:none;
+	position:absolute;
+	top:0;
+	left:0;
+	background: rgb(0, 0, 0);
+	background: rgba(0, 0, 0, 0.6);
+}
+.popin {
+	margin: 100px;
+	margin-right: 35%;
+	margin-left: 35%;
+	color: #000;
+	background-color: #ccc;
+	border-radius: 20px;
+	padding: 10px;
+	padding-bottom: 5%;
+}
+
+button {
+	background: blue;
+	color: red;
+	height: 35px;
+	width: 70px;
+	border-radius: 15px;
+}

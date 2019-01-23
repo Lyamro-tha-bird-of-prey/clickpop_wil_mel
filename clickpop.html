@@ -1,15 +1,21 @@
 <!DOCTYPE html>
-<html lang="fr" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-  </head>
-  <body>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Pop-in</title>
+	<link href="style.css" rel="stylesheet" type="text/css" />
+	<script src="script.js" type="text/javascript"></script>
+</head>
 
-    <button type="button" name="button"></button>
-    
-    <script type="text/javascript">
+<body>
+	<div id="pop1" class="parentDisable">
+		<div class="popin">
+			<h2>Ceci est une Pop-in</h2>
+			<button type="button" onClick="return hide('pop1')" onmouseover="nicebut(this)" onmouseout="norbut(this)">retour</a>
+		</div>
+	</div>
 
-    </script>
-  </body>
+	<h3>Pop-in</h3>
+	<button type="button" onClick="return pop('pop1')" onmouseover="nicebut(this)" onmouseout="norbut(this)">click ici</a>
+</body>
 </html>
