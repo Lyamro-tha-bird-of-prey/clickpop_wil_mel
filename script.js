@@ -6,10 +6,7 @@ function hide() {
 }
 
 var hd = document.getElementById('hidden');
-for (var i = 0; i < hd.length; i++) {
-	hd[i].addEventListener("click", pop);
-}
+hd.addEventListener("click", pop);
+
 var pp = document.getElementById('popped');
-for (var i = 0; i < pp.length; i++) {
-	pp[i].addEventListener("click", hide);
-}
+pp.addEventListener("click", hide);
