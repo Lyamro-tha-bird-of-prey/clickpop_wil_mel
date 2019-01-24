@@ -8,5 +8,7 @@ function norbut() {
 }
 
 var stybut = document.getElementsByTagName('button');
-stybut.getEventListener("mouseover", nicebut);
-stybut.getEventListener("mouseout", norbut);
+for (var i = 0; i < stybut.length; i++) {
+  stybut[i].getEventListener("mouseover", nicebut);
+  stybut[i].getEventListener("mouseout", norbut);
+}
