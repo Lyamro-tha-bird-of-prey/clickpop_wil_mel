@@ -26,7 +26,7 @@ function enbut() {
 }
 
 function substate() {
-	if (ismail()) {
+	if (ismail() && ispass()) {
 		return enbut()
 	} else {
 		return disbut()
@@ -35,15 +35,26 @@ function substate() {
 
 function ismail() {
 	var entm = mailval.value;
-	var result = false;
+	var resm = false;
 	for (var i = 0; i < entm.length; i++) {
 		if (entm[i] == "@") {
-			result = true;
+			resm = true;
 		}
 	}
-	return result;
+	return resm;
+}
+
+function ispass() {
+	var entp = passval.value;
+	var resp = false;
+	if (entp.length > 0) {
+		resp = true;
+	}
+	return resp;
 }
 
 var mailval = document.getElementById('mailin');
+var passval = document.getElementById('passin');
 mailval.addEventListener("input", substate);
+passval.addEventListener("input", substate);
 substate()
