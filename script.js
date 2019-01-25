@@ -11,14 +11,14 @@ document.getElementById('pp').addEventListener("click", hide);
 
 
 function disbut() {
-	document.getElementById('subm').setAttribute("disabled", true);
+	document.getElementById('subm').disabled = true;
 	document.getElementById('subm').style.background = "grey";
-	document.getElementById('subm').style.color = "black"
+	document.getElementById('subm').style.color = "black";
 	document.getElementById('subm').removeEventListener("mouseover", nicebut);
 	document.getElementById('subm').removeEventListener("mouseout", norbut);
 }
 function enbut() {
-	document.getElementById('subm').setAttribute("disabled", false);
+	document.getElementById('subm').disabled = false;
 	document.getElementById('subm').style.background = "blue";
 	document.getElementById('subm').style.color = "red";
 	document.getElementById('subm').addEventListener("mouseover", nicebut);
