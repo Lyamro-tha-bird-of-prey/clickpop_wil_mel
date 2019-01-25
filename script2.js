@@ -7,6 +7,7 @@ function norbut() {
 	this.style.color = "red";
 }
 
+//application des effets sur tous les boutons
 var stybut = document.getElementsByTagName('button');
 console.log(stybut);
 for (var i = 0; i < stybut.length; i++) {
