@@ -19,32 +19,31 @@ function disbut() {
 }
 function enbut() {
 	document.getElementById('subm').setAttribute("disabled", false);
+	document.getElementById('subm').style.background = "blue";
+	document.getElementById('subm').style.color = "red";
 	document.getElementById('subm').addEventListener("mouseover", nicebut);
 	document.getElementById('subm').addEventListener("mouseout", norbut);
 }
 
-disbut()
-
-
-var mailval = document.getElementById('mailin');
+function substate() {
+	if (ismail()) {
+		return enbut()
+	} else {
+		return disbut()
+	}
+}
 
 function ismail() {
 	var entm = mailval.value;
 	var result = false;
-	for (var chr in entm) {
-		if (chr == "@") {
+	for (var i = 0; i < entm.length; i++) {
+		if (entm[i] == "@") {
 			result = true;
 		}
 	}
 	return result;
 }
 
+var mailval = document.getElementById('mailin');
 mailval.addEventListener("input", substate);
-
-function substate() {
-	if (ismail() == true) {
-		enbut()
-	} else {
-		disbut()
-	}
-}
+substate()
