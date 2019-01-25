@@ -1,10 +1,10 @@
 function pop() {
-	this.style.display="block";
+	document.getElementById('pop1').style.display='block';
 }
 function hide() {
-	this.style.display="none";
+	document.getElementById('pop1').style.display='none';
 }
 
 document.getElementById('hd').addEventListener("click", pop);
 
-document.getElementById('pp')this.addEventListener("click", hide);
+document.getElementById('pp').addEventListener("click", hide);
